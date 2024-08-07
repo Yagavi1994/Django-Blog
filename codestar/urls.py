@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from blog import views as index_views
+from blog.views import my_blog
 
 urlpatterns = [
-    path('', index_views.index, name='index'),
+    path('', my_blog, name='blog'),
     path('admin/', admin.site.urls),
 ]
