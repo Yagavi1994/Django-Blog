@@ -2,15 +2,16 @@ from django.db import models
 from django.contrib.auth.models import User
 
 STATUS = ((0, "Draft"), (1, "Published"))
+CATEGORY = ((0, "Fiction"), (1, "Non-Fiction"))
 GENRES = [
     (0, "Adventure"), 
     (1, "Romance"), 
     (2, "Fantasy"), 
-    (3, "Science Fiction"), 
+    (3, "Science"), 
     (4, "Mystery"), 
     (5, "Horror"), 
     (6, "Thriller"), 
-    (7, "Historical Fiction"), 
+    (7, "Historical"), 
     (8, "Comedy"), 
     (9, "Drama"), 
     (10, "Detective/Crime"), 
@@ -22,7 +23,8 @@ GENRES = [
     (16, "Coming-of-Age"), 
     (17, "Slice of Life"), 
     (18, "Tragedy"), 
-    (19, "Mythology")
+    (19, "Mythology"),
+    (20, "Technology"),
 ]
 
 # Create your models here.
@@ -34,6 +36,7 @@ class Post(models.Model):
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )
     content = models.TextField()
+    category = models.IntegerField(choices=CATEGORY, default=0)
     genre = models.IntegerField(choices=GENRES, default=0)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)

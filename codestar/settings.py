@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-293-r*35)$qvivkhu84ctonrqg(jkzrww(1#n9$*%%3qzu%t9g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['8000-yagavi1994-djangoblog-z0lzki4w6ss.ws-eu115.gitpod.io','.herokuapp.com']
+ALLOWED_HOSTS = ['8000-yagavi1994-djangoblog-3qbpmait4oj.ws-eu115.gitpod.io','.herokuapp.com']
 
 
 # Application definition
@@ -93,7 +93,7 @@ DATABASES = {
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net/",
     "https://*.herokuapp.com",
-    "https://8000-yagavi1994-djangoblog-z0lzki4w6ss.ws-eu115.gitpod.io"
+    "https://8000-yagavi1994-djangoblog-3qbpmait4oj.ws-eu115.gitpod.io"
 ]
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
