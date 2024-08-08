@@ -13,6 +13,7 @@
     {% for post in object_list %}
     <h2>{{post.title}}</h2>
     <p>{{post.excerpt}}</p>
+    <p>Genre: {{post.genre}}</p>
     <p>Author: {{post.author}}</p>
     {% endfor %}
 </body>
