@@ -32,6 +32,10 @@ GENRES = [
 # Create your models here.
 
 class Post(models.Model):
+    """
+    Stores a single blog post entry related to :model: `auth:user`
+    """
+
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
@@ -53,6 +57,9 @@ class Post(models.Model):
         return f"{self.title} | written by {self.author}"
 
 class Comment(models.Model):
+    """
+    Store a single comment entry related to :model: `auth:user` and :model: `auth:blog.Post`.
+    """
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name="comments")
     author = models.ForeignKey(

@@ -26,7 +26,7 @@ body {
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #4577dc;
 }
 
 .card {
@@ -158,4 +158,8 @@ body {
 
 .approval {
     color: rgb(222, 146, 168);
+}
+
+.profile-image {
+    width: 75%;
 }
